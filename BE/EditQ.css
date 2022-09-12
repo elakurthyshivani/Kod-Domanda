@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+form	{
+	width:50%;
+	border:0;
+}
+
+form:nth-of-type(2n) {
+	border-left:2px dashed #888;
+}
+
+section.qn-con	{
+	flex-wrap:wrap;
+}
+
+section.qn-con div.qn	{
+	margin:2% 5%;
+	cursor:pointer;
+	min-width:15%;
+	transition:0.3s ease;
+}
+
+section.qn-con div.qn:hover	{
+	background:#555;
+	transform:scale(1.2, 1.2);
+}
+
+@media only screen and (max-width:650px)	{
+	section	{
+		flex-direction:column;
+	}
+	
+	form	{	
+		width:100%;
+		padding:5% 0 0;
+		margin-bottom:5%;
+	}
+	form:nth-of-type(2n) {
+		border-left:0;
+		border-top:2px dashed #888;
+	}
+}

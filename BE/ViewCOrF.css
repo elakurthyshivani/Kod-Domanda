@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+nav	{
+	width:100%;
+	text-align:center;
+	padding:2%;
+	font-size:2em;
+}
+
+nav div	{
+	display:inline-block;
+	cursor:pointer;
+	color:Blue;
+	transition:0.3s ease;
+}
+
+nav div:hover, nav div.active	{
+	transform:scale(1.4, 1.4);
+	color:Lawngreen;
+}
+
+section	{
+	width:100%;
+	display:none;
+	padding:5%;
+}
+
+section.active	{	display:block;	}
+
+section .group	{
+	position:relative;
+	border:2px dashed #888;
+	margin-bottom:2%;
+}
+
+section .group div	{
+	position:relative;
+	width:98%;
+	margin:1%;
+	padding:1%;
+	background:#88DDFF;
+	white-space:pre-wrap;
+	word-break:break-word;
+	text-align:right;
+}
+
+section .group div.subject	{	background:#0F9;	}
+
+section .group div.message	{	
+	background:#FF8FF8;
+	text-align:left;
+	padding-top:5%;
+}
+
+section .group div::before	{
+	position:absolute;
+	left:1%;
+	top:1%;
+	font-family:Comfortaa;
+	font-weight:bold;
+	color:White;
+	font-variant:small-caps;
+}
+
+.mid::before	{	content:"No.";	}
+.name::before	{	content:"Name";	}
+.email::before	{	content:"Email";	}
+.subject::before	{	content:"Subject";	}
+.message::before	{	content:"Message";	}
+
+section .group div.mid	{	width:50%;	}
+section .group div.name	{	width:70%;	}
+section .group div.email	{	width:90%;	}
+
+section .group button	{
+	position:absolute;
+	display:inline-block;
+	top:2%;
+	right:1%;
+	width:25%;
+	padding:1%;
+	box-shadow:0;
+	border:0;
+	cursor:pointer;
+	background:#888;
+	color:white;
+	transition:0.3s ease;
+}
+
+section .group button:hover	{	background:#555;	}

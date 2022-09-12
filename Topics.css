@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+#main	{
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	background-color:#EFEFEF;
+}
+
+#main section	{	
+	width:25%;
+	padding:5px;
+}
+
+#main section a	{
+	position:relative;
+	display:block;
+	opacity:0.75;
+	color:white;
+	background-color:#555;
+	text-align:center;
+	text-decoration:none;
+	font-family:'Special Elite';
+	font-size:2.5em;
+	word-wrap:break-word;
+	float:left;
+	width:90%;
+	padding:50px 10px;
+	margin:5%;
+	transition:opacity 0.3s ease, transform 0.3s ease;
+}
+
+#main section a:hover	{
+	opacity:0.5;
+	box-shadow:2px 2px 0px #555;
+	transform:scale(1.1, 1.1);
+}
+
+@media only screen and (max-width: 700px) {
+	#main section a	{
+		font-size:1.5em;
+	}
+}
+@media only screen and (max-width: 425px) {
+	#main section {
+		width:50%;
+	}
+}

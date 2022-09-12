@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#q-con	{	padding:2%;	}
+
+#q-con .q, #q-con .tag	{
+	display:none;
+	width:100%;
+	overflow:auto;
+}
+
+#q-con .q	{
+	height:80%;
+	padding:5%;
+	background-color:LightCyan;
+	white-space:pre-wrap;
+	word-wrap:break-word;
+}
+
+#q-con .tag	{
+	height:15%;
+	margin-top:5%;
+	padding:1% 5%;
+	background-color:MistyRose;
+	word-break:break-word;
+}
+
+#q-con .tag span	{	color:MistyRose;	}
+
+#q-con .tag:hover span	{
+	color:DodgerBlue;
+	text-decoration:underline;
+}
+
+@media only screen and (max-width:700px)	{
+	#q-con .q, #q-con .tag	{	width:100%;	}
+}

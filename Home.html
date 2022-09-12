@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>You're In KD!</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+	font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="Window.css" />
+	<link rel="stylesheet" href="Nav.css" />
+	<link rel="stylesheet" href="Home.css" />
+	<link rel="stylesheet" href="Slides.css" />
+	<link rel="stylesheet" href="Form.css" />
+</head>
+<body>
+	<nav>
+		<a href="Languages.php">Languages</a>
+		<a href="Topics.php">Topics</a>
+		<a href="Q.php?rand=1">Random</a>
+	</nav>
+	
+	<div id="main">
+		<header>
+			<img src="images/logo.png" />
+		</header>
+		
+		<div id="slide-con">
+			<div id="slides">
+				<img class="slide" src="images/slide1.jpg" />
+				<img class="slide" src="images/slide2.jpg" />
+				<img class="slide" src="images/slide3.jpg" />
+				<img class="slide" src="images/slide4.jpg" />
+				<div class="move" id="prev" onclick="toSlide(-1, 'prev')">&lt;</div>
+				<div class="move" id="next" onclick="toSlide(1, 'next')">&gt;</div>
+			</div>
+			<div id="circles">
+				<span class="circle active" onclick="toSlideNumber(0)"></span>
+				<span class="circle" onclick="toSlideNumber(1)"></span>
+				<span class="circle" onclick="toSlideNumber(2)"></span>
+				<span class="circle" onclick="toSlideNumber(3)"></span>
+			</div>
+		</div>
+		
+		<div id="features">
+			<div class="title">Features</div>
+			<div class="feature">
+This website completely focuses on programming aptitude questions.
+			</div>
+			<div class="feature">
+Take any quiz for any number of times.
+			</div>
+			<div class="feature">
+Each question has associated tags which can act as a clue if you aren't
+able to answer it.
+			</div>
+			<div class="feature">
+You can spend as much time as you wish. The quizzes are not time bounded.
+			</div>
+			<div class="feature">
+Answers for the wrongly attempted ones are provided at the end of the
+quiz.
+			</div>
+			<div class="feature">
+What's more interesting? New questions will be added regularly!
+			</div>
+		</div>
+		
+		<div id="contact">
+			<div class="title">Contact Us</div>
+			<form action="Contact.php" name="contact" method="POST"
+			onsubmit="return validateContact()">
+				<input type="text" placeholder="Name" name="name"/>
+				<div class="Error">
+					* Enter a valid name containing alphabets, numbers,
+					dots and spaces only.
+				</div>
+				<input type="email" placeholder="Email" name="email"/>
+				<div class="Error">
+					* Enter a valid email.
+				</div>
+				<input type="text" placeholder="Subject" name="subject"/>
+				<textarea rows="10" placeholder="Enter your message"
+				name="msg"></textarea>
+				<div class="Error">
+					* Message can't be empty.
+				</div>
+				<button type="submit" name="send">Send</button>
+			</form>
+		</div>
+		
+		<div id="feedback">
+			<div class="title">Feedback</div>
+			<form action="Feedback.php" name="feedback" method="POST"
+			onsubmit="return validateFeedback()">
+				<input type="text" placeholder="Name" name="name"/>
+				<div class="Error">
+					* Enter a valid name containing alphabets, numbers,
+					dots and spaces only.
+				</div>
+				<textarea rows="10" placeholder="Enter your feedback"
+				name="msg"></textarea>
+				<div class="Error">
+					* Enter a valid name containing alphabets, numbers,
+					dots and spaces only.
+				</div>
+				<button type="submit" name="sf">Submit Feedback</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="FormValidations.js"></script>
+	<script src="Home.js"></script>
+</body>
+</html>

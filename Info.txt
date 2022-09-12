@@ -1,0 +1,4 @@
+Kód : Code
+Domanda : Question
+
+This folder is a project folder and it goes into htdocs.

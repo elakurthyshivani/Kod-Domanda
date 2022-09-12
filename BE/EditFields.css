@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+section	{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	width:98%;
+	border:2px dashed #888;
+	margin:1% 1%;
+	padding:1%;
+}
+
+form	{
+	width:75%;
+	padding-bottom:5%;
+	margin:0;
+	border-left:2px dashed #888;
+}
+
+div.qn	{
+	display:block;
+	min-width:10%;
+	font-size:3em;
+	color:white;
+	margin:0;
+	padding:2%;
+	border-radius:50%;
+	background-color:#555;
+	text-align:center;
+}
+
+textarea, input, select	{
+	background-color:White;
+	border:1px solid #DFDFDF;
+	transition:border-radius 0.3s ease;
+	position:relative;
+}
+
+textarea:focus, input:focus	{
+	background-color:White;
+	border-radius:20px;
+}
+
+@media only screen and (max-width:700px)	{
+	div.qn	{	font-size:2em;	}
+}
+
+@media only screen and (max-width:400px)	{
+	div.qn	{	font-size:1em;	}
+}

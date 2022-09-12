@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+#background	{
+	position:fixed;
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	background:#EFEFEF;
+}
+
+#quiz-con	{
+	width:100%;
+	min-height:90%;
+}
+
+.quiz	{
+	width:70%;
+	margin:2% 10% 2% 20%;
+	padding:2%;
+	position:relative;
+	cursor:pointer;
+	float:left;
+}
+
+.quiz-no	{
+	width:85%;
+	font-family:'Special Elite';
+	font-size:2em;
+	float:left;
+	font-weight:bold;
+	font-variant:small-caps;
+	padding:2%;
+}
+
+.tags	{
+	width:85%;
+	padding:1%;
+	float:left;
+}
+
+.noq	{
+	width:15%;
+	float:right;
+	text-align:center;
+	font-size:4em;
+	font-weight:bold;
+}
+
+.quiz::after	{
+	position:absolute;
+	top:-4%;
+	left:-1%;
+	width:0%;
+	height:0%;
+	z-index:-1;
+	content:' ';
+	background-color:black;
+	border-radius:20px;
+}
+
+.quiz:hover	{	
+	color:white;
+	border-radius:20px;
+	transition:border-radius 0.3s ease;
+}
+
+.quiz:hover::after	{
+	animation:grow 0.3s ease;
+	width:102%;
+	height:108%;
+}
+
+@keyframes grow	{
+	from	{
+		width:0%;
+		height:0%;
+	}
+	to	{
+		width:102%;
+		height:108%;
+	}
+}
+
+@media only screen and (max-width:850px)	{
+	.quiz .quiz-no, .quiz .tags	{	width:75%;	}
+	
+	.quiz .tags	{	font-size:0.7em;	}
+	
+	.quiz .noq	{	width:25%;	}
+}
+
+@media only screen and (max-width:550px)	{
+	.quiz .noq	{	font-size:3em;	}
+}
+
+@media only screen and (max-width:400px)	{
+	.quiz::after	{	left:-3%;	}
+	.quiz:hover::after	{	width:106%;	}
+	@keyframes grow	{
+	from	{
+		width:0%;
+		height:0%;
+	}
+	to	{
+		width:102%;
+		height:106%;
+	}
+}
+}
+
+@media only screen and (max-width:350px)	{
+	.quiz .noq	{	font-size:2em;	}
+}
